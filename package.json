@@ -9,13 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-<<<<<<< HEAD:Acudiente_Api/package.json
   "engines": {
     "node": ">=14.20.1"
-=======
-  "engines":{
-    "node":">=14.20.1"
->>>>>>> 67b7aa215cfe6848d5bdd77f1663076e74462f8b:package.json
   },
   "dependencies": {
      "body-parser": "^1.20.2",
