@@ -1,0 +1,27 @@
+{
+  "name": "acudiente_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+<<<<<<< HEAD:Acudiente_Api/package.json
+  "engines": {
+    "node": ">=14.20.1"
+=======
+  "engines":{
+    "node":">=14.20.1"
+>>>>>>> 67b7aa215cfe6848d5bdd77f1663076e74462f8b:package.json
+  },
+  "dependencies": {
+     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.1"
+  }
+}
