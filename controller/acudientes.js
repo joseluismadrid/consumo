@@ -10,7 +10,7 @@ const getAcudiente = async (req, res) => {
 };
 
 const postAcudiente = async (req, res) => {
-    const datos = req.query //capturar datos de la postman
+    const datos = req.body //capturar datos de la postman
     let mensaje = 'Inserción exitosa'
     try {
         const acudiente = new acudientes(datos)
@@ -25,10 +25,10 @@ const postAcudiente = async (req, res) => {
     })
 };
 const putAcudiente = async (req, res) => {
-    const { nombreCompleto, tipoDocumento,documento,parentesco,estado,telefono,fechaNacimiento,direccion,ciudad,observacion } = req.query //desetructurar 
+    const { nombreCompleto, tipoDocumento,documento,parentesco,estado,telefono,fechaNacimiento,direccion,ciudad,observacion } = req.body //desetructurar 
     let mensaje = 'Actualizacion Exitosa'
     try {
-        const acudiente = await acudientes.findOneAndUpdate({ nombreCompleto:nombreCompleto },  {tipoDocumento:tipoDocumento,documento:documento,parentesco:parentesco,estado:estado,direccion:direccion,ciudad:ciudad,observacion} )   
+        const acudiente = await acudientes.findOneAndUpdate({ nombreCompleto:nombreCompleto },  {tipoDocumento:tipoDocumento,documento:documento,parentesco:parentesco,estado:estado,direccion:direccion,ciudad:ciudad,observacion,telefono:telefono,fechaNacimiento:fechaNacimiento} )   
          
     } catch (error) {
         mensaje = error;
@@ -39,7 +39,7 @@ const putAcudiente = async (req, res) => {
 
 }
 const deleteAcudiente = async (req, res) => {
-    const { nombreCompleto } = req.query //desetructurar 
+    const { nombreCompleto } = req.body//desetructurar 
     let mensaje = 'Eliminacion Exitosa'
     try {
         const acudiente = await acudientes.findOneAndDelete({ nombreCompleto: nombreCompleto })
