@@ -52,4 +52,4 @@ const AcudientesSchema = ({
     }
 })
 
-module.exports = model('Acudientes',AcudientesSchema)
+module.exports = model('acudientes',AcudientesSchema)
