@@ -8,7 +8,7 @@ class Server{
     constructor(){
         this.app = express()
         this.port = process.env.PORT
-        this.usuarioPath = '/acudiente' //Ruta de la API
+        this.acudientePath = '/acudiente' //Ruta de la API
         this.middlewares()
         this.routes()
         this.conectarDB()
@@ -17,13 +17,13 @@ class Server{
     listen(){
         this.app.listen(
          this.port, () => {
-            console.log('Escuchando por el puerto'+this.port)
+            console.log('Escuchando por el puerto  '+this.port)
          }
         )
     }
 
     routes(){
-        this.app.use(this.usuarioPath, require('../routes/acudientes'))
+        this.app.use(this.acudientePath , require('../routes/acudientes'))
     }
 
     middlewares(){//

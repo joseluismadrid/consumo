@@ -18,7 +18,7 @@ const postAcudiente = async (req, res) => {
         console.log(acudiente)
     } catch (error) {
         mensaje = error
-        console.log(mensaje)
+        console.log(error)
     }
     res.json({
         msg: mensaje
