@@ -23,6 +23,7 @@ const AcudientesSchema = ({
     estado:{
         type:Boolean,  
         default:true,
+        enum:['activo legalmente','inactivo legalmente','fallecido']
     },
     telefono:{
         type:String,
