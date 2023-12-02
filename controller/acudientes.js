@@ -21,7 +21,7 @@ const postAcudiente = async (req, res) => {
         console.log(error)
     }
     res.json({
-        msg: mensaje
+        msg:mensaje
     })
 };
 const putAcudiente = async (req, res) => {
