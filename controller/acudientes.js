@@ -25,10 +25,10 @@ const postAcudiente = async (req, res) => {
     })
 };
 const putAcudiente = async (req, res) => {
-    const { nombreCompleto, tipoDocumento,documento,parentesco,estado,telefono,fechaNacimiento,direccion,ciudad,observacion } = req.body //desetructurar 
+    const { nombreCompleto, tipoDocumento,documento,parentesco,estado,telefono,fechaNacimiento,direccion,ciudad,observacion, preciodolar } = req.body //desetructurar 
     let mensaje = 'Actualizacion Exitosa'
     try {
-        const acudiente = await Acudientes.findOneAndUpdate({ nombreCompleto:nombreCompleto },  {tipoDocumento:tipoDocumento,documento:documento,parentesco:parentesco,estado:estado,direccion:direccion,ciudad:ciudad,observacion,telefono:telefono,fechaNacimiento:fechaNacimiento} )   
+        const acudiente = await Acudientes.findOneAndUpdate({ nombreCompleto:nombreCompleto },  {tipoDocumento:tipoDocumento,documento:documento,parentesco:parentesco,estado:estado,direccion:direccion,ciudad:ciudad,observacion,telefono:telefono,fechaNacimiento:fechaNacimiento,preciodolar:preciodolar} )   
          
     } catch (error) {
         mensaje = error;
@@ -48,7 +48,7 @@ const deleteAcudiente = async (req, res) => {
         mensaje = error;
     }
     res.json({
-        "msg": mensaje
+        msg:mensaje
     })
 
 }
