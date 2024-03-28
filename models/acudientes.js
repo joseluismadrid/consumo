@@ -8,7 +8,7 @@ const AcudientesSchema = ({
     },
     apellido:{
         type:String,       
-        required:[true,'El nombre  es requerido'],
+        required:[true,'El Apellido es requerido'],
     },
     tipoDocumento:{
         type:String,
@@ -16,7 +16,7 @@ const AcudientesSchema = ({
 
     },
     documento:{
-        type:String,
+        type:Number,
         unique:true,
         required:[true,'El documento  es requerido'],
     },
@@ -30,7 +30,7 @@ const AcudientesSchema = ({
         
     },
     telefono:{
-        type:String,
+        type:Number,
         required:[true,' El parentesco es requerida'],
         min:[7,'El telefono debe contener mínimo 7 caracteres'],
         max:[10,'El telefono debe contener máximo 10 cararacteres']
