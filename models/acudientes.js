@@ -35,7 +35,7 @@ const AcudientesSchema = ({
        
     }, 
     fechaNacimiento:{
-        type:String,
+        type:Date,
         required:[true,' La fecha de nacimiento es requerida'],
 
     },
