@@ -1,9 +1,12 @@
 const {Schema, model }=require('mongoose')
 
 const AcudientesSchema = ({
-    nombreCompleto:{
+    nombre:{
         type:String,
-        unique:true,
+        required:[true,'El nombre  es requerido'],
+    },
+    apellido:{
+        type:String,       
         required:[true,'El nombre  es requerido'],
     },
     tipoDocumento:{
