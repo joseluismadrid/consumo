@@ -51,10 +51,7 @@ const AcudientesSchema = ({
         min:[100,'La  observacion debe contener mínimo 100 caracteres'],
         max:[500,'La  observacion debe contener máximo 500 cararacteres']
     },
-    preciodolar:{
-        type:Number,
-        required:[true,'el precio del dolar es requerido']
-    }
+   
 })
 
 module.exports = model('acudientes',AcudientesSchema)
