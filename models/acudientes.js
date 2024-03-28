@@ -32,9 +32,7 @@ const AcudientesSchema = ({
     telefono:{
         type:Number,
         required:[true,' El parentesco es requerida'],
-        min:[7,'El telefono debe contener mínimo 7 caracteres'],
-        max:[10,'El telefono debe contener máximo 10 cararacteres']
-
+       
     }, 
     fechaNacimiento:{
         type:String,
