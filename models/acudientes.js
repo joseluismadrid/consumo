@@ -25,8 +25,8 @@ const AcudientesSchema = ({
         required:[true,' El parentesco es requerida'],
     },
     estado:{
-        type:Boolean,  
-        default:true,
+        type:String,
+        required:[true,' El estado es requerida'],
         
     },
     telefono:{
